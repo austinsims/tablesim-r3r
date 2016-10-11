@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import React3 from 'react-three-renderer';
 import THREE from 'three';
-import TrackballControls from './TrackballControls';
+import OrbitControls from './OrbitControls';
 
 export class Simple extends React.Component {
   constructor(props, context) {
@@ -31,7 +31,7 @@ export class Simple extends React.Component {
   }
 
   componentDidMount() {
-    const controls = new TrackballControls(this.refs.camera, ReactDOM.findDOMNode(this.refs.react3));
+    const controls = new OrbitControls(this.refs.camera, ReactDOM.findDOMNode(this.refs.react3));
 
     controls.rotateSpeed = 1.0;
     controls.zoomSpeed = 1.2;
